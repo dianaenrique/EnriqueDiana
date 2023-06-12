@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Permanent+Marker&family=Poppins:wght@300&family=Rampart+One&family=Rubik+Mono+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "poppins";
+    outline: none;
+    border: none;
+}
+html{
+    font-size: 65.5%;
+    overflow-x: hidden;
+}
+body{
+    background: black;
+    color: #fff;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;ss
+    padding: 2rem 9%;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.header span{
+    font-family: Boulder;
+    color: red;
+    font-size: 2.2rem;
+
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.sticky{
+    border-bottom: 1px solid rgba(225,225,225,.1);
+}
+.Logo{
+    font-size: 1.7rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    animation: SlideRight 1s ease forwards;
+    opacity: 0;
+}
+@keyframes SlideRight{
+    0%{
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.navbar a{
+    color: red;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 4rem;
+    font-size: 1.7rem;
+    animation: slideTop .5 ease forwards;
+    opacity: 0;
+    animation-delay: calc(.2s*var(--clr));
+    font-family: Boulder;
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.navbar a:hover,.navbar a.active{
+    color: red;
+}
+#menu{
+    font-size: 3.6rem;
+    display: none; 
+}
+/*TODO---------------------HEAD-SECTION---------------------*/
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-detail h4{
+    font: serif;
+    font-size: 3rem;
+    font-weight: 300;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+    opacity: 0;
+}
+.home-detail .textline{
+    font-family: Rubik Mono One;
+}
+.home-detail h1{
+    font: serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: -3px 0;  
+    animation: SlideRight 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+    color: white;
+}
+.home-detail h2{
+    font: serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: -3px 0;  
+    animation: SlideRight 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+    color: white;
+}
+.home-detail h3{
+    font: serifs;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: -3px 0;  
+    animation: SlideRight 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+    color:white
+}
+.home-detail h5{
+    font-family: BinnerD;
+    font-size: 5rem;
+    font-weight: 700;
+    margin: -3px 0;  
+    animation: SlideRight 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+    color: white;
+    
+}
+.home-detail p{
+    font-size: 2rem;
+    opacity: 1;
+    animation: SlideLeft 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s; 
+    color: whiteS;
+}
+@keyframes SlideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.social-media a{
+    display: inline-flex;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    color: red;
+    font-size: 2rem;
+    border: 2px solid red;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+/*TODO---------------THIS THING IS FOR JAVASCRIPT----------------*/
+.social-media a:hover,.social-media a.active{
+    background: red;
+    color: black;
+    box-shadow: 0 0 20px red;
+}
+.home-detail h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color: white;
+}
+.btn{
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 1rem 2.8rem;
+    border-radius: 40px;
+    color: #000;
+    background: red;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    transition: .5s ease;
+}
+.btn:hover{
+    background: #000;
+    color: white;
+    border: 1px solid red;
+}
+.home-img img{
+    width: 15vw;
+    animation: Zoom 1 ease forwards, Float 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+    opacity: 0;
+}
+@keyframes Zoom{
+    0%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes Float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/*TODO---------------------------ABOUT-SECTION------------------------*/
+.about-img img{
+    width: 10;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+.allheading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.about-section h2{
+    text-align: left;
+    line-height: 1.2;
+    color: white;
+}
+.about-section h3{
+    font-size: 2.6rem;
+}
+.about-section p{
+    font-size: 3.3rem;
+    margin: 2rem 0 3rem; 
+}
+/*TODO---------------------------SKILLS-SECTION------------------------*/
+.service-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.service-section .service-box{
+    flex: 1 1 30rem;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    background: #111;
+    text-align: center;
+    border: 3px solid #000;
+    transition: .5s ease;
+}
+.service-box:hover{
+    border: 2px solid #ef
